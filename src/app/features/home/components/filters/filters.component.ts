@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Color } from 'src/app/shared/color';
 
 @Component({
   selector: 'app-filters',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
+  @Input() public colors: Color[] | null;
 
-  constructor() { }
+  public presetColorBind!: Color;
+  public customColorBind!: string;
 
-  ngOnInit(): void {
+  constructor() {
+    this.colors = new Array<Color>();
   }
 
+  public ngOnInit(): void { }
 }

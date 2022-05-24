@@ -1,0 +1,10 @@
+<mat-form-field appearance="fill">
+  <mat-label>Custom color</mat-label>
+
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="modelBind"
+    (ngModelChange)="emitModelBindChange()"
+  />
+</mat-form-field>

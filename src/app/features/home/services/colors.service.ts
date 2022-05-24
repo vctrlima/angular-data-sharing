@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Color } from 'src/app/shared/color';
 
 @Injectable()
 export class ColorsService {
@@ -10,7 +11,7 @@ export class ColorsService {
     private httpClient: HttpClient,
   ) { }
 
-  public get(): Observable<Object> {
-    return this.httpClient.get(this.jsonUrl) as Observable<Object>;
+  public get(): Observable<Color[]> {
+    return this.httpClient.get(this.jsonUrl) as Observable<Color[]>;
   }
 }

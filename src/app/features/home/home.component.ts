@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Color } from 'src/app/shared/color';
 import { ColorsService } from './services/colors.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { ColorsService } from './services/colors.service';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-  public colors$: Observable<Object>;
+  public colors$: Observable<Color[]>;
 
   constructor(
     private colorService: ColorsService
   ) {
-    this.colors$ = new Observable<Object>();
+    this.colors$ = new Observable<Color[]>();
   }
 
   public ngOnInit(): void {

@@ -1,8 +1,7 @@
 <div>
-  <app-filters></app-filters>
-  <app-results></app-results>
+  <app-filters
+    [colors]="colors$ | async"
+  ></app-filters>
 
-  <p>
-    {{ colors$ | async | json }}
-  </p>
+  <app-results></app-results>
 </div>

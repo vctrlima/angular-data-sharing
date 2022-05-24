@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill">
+  <mat-label>Color</mat-label>
+
+  <mat-select [(ngModel)]="modelBind" (ngModelChange)="emitModelBindChange()">
+    <mat-option *ngFor="let option of modelOptions" [value]="option">
+      {{ option.color }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,1 +1,8 @@
-<p>filters works!</p>
+<app-dropdown
+  [(modelBind)]="presetColorBind"
+  [modelOptions]="colors"
+></app-dropdown>
+
+<app-input
+  [(modelBind)]="customColorBind"
+></app-input>
