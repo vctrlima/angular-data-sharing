@@ -1,8 +1,10 @@
 <app-dropdown
   [(modelBind)]="presetColorBind"
+  (modelBindChange)="setPresetColorOnFilter()"
   [modelOptions]="colors"
 ></app-dropdown>
 
 <app-input
   [(modelBind)]="customColorBind"
+  (modelBindChange)="setCustomColorOnFilter()"
 ></app-input>

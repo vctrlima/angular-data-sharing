@@ -7,13 +7,13 @@ import { Color } from 'src/app/shared/color';
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
-  @Input() public modelBind!: Color;
+  @Input() public modelBind!: string;
   @Input() public modelOptions: Color[] | null;
-  @Output() public modelBindChange: EventEmitter<Color>;
+  @Output() public modelBindChange: EventEmitter<string>;
 
   constructor() {
     this.modelOptions = new Array<Color>();
-    this.modelBindChange = new EventEmitter<Color>();
+    this.modelBindChange = new EventEmitter<string>();
   }
 
   public ngOnInit(): void { }

@@ -2,7 +2,7 @@
   <mat-label>Color</mat-label>
 
   <mat-select [(ngModel)]="modelBind" (ngModelChange)="emitModelBindChange()">
-    <mat-option *ngFor="let option of modelOptions" [value]="option">
+    <mat-option *ngFor="let option of modelOptions" [value]="option.code.hex">
       {{ option.color }}
     </mat-option>
   </mat-select>
