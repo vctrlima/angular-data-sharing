@@ -1,27 +1,30 @@
-# AngularDataSharing
+# Angular | Different ways of sharing data
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+Simple app covering the different ways of sharing data in an Angular app.
 
-## Development server
+## Project's goal
+
+Introduce the different ways to share data between components within an application. Here are covered:
+- [Input decorator](https://angular.io/api/core/Input);
+- [Output decorator](https://angular.io/api/core/Output);
+- [Two-way binding](https://angular.io/guide/two-way-binding);
+- [Observables](https://rxjs-dev.firebaseapp.com/guide/observable);
+- [Subjects](https://rxjs-dev.firebaseapp.com/guide/subject);
+- [Subscription](https://rxjs-dev.firebaseapp.com/guide/subscription);
+- [Services](https://angular.io/guide/architecture-services).
+
+## Cloning the project
+
+Run `git clone https://github.com/vctrlima/angular-data-sharing.git` in terminal.
+
+## Installing dependency packages
+
+Run `npm install` in terminal.
+
+## Running development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## About
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
