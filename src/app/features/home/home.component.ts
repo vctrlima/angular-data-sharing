@@ -11,14 +11,14 @@ import { DataSharingService } from './services/data-sharing.service';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-  public colors$: Observable<Color[]>;
-  public selectedColor!: Color | string;
+  public presetColors$: Observable<Color[]>;
+  public selectedColor: Color | string = '#ffffff';
 
   constructor(
     private colorService: ColorsService,
     private dataSharingService: DataSharingService,
   ) {
-    this.colors$ = new Observable<Color[]>();
+    this.presetColors$ = new Observable<Color[]>();
   }
 
   public ngOnInit(): void {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   private getColors(): void {
-    this.colors$ = this.colorService.get();
+    this.presetColors$ = this.colorService.get();
   }
 
   private initializeSubscriptions(): void {

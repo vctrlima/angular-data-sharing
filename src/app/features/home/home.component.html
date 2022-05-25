@@ -1,7 +1,8 @@
 <div>
   <app-filters
-    [colors]="colors$ | async"
+    [presetColors]="presetColors$ | async"
+    [customColorBind]="selectedColor.toString()"
   ></app-filters>
 
-  <app-results></app-results>
+  <app-results [selectedColor]="selectedColor"></app-results>
 </div>

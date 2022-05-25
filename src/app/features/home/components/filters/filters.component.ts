@@ -1,22 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Color } from 'src/app/shared/color';
 import { DataSharingService } from '../../services/data-sharing.service';
 
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  styleUrls: ['./filters.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class FiltersComponent implements OnInit {
-  @Input() public colors: Color[] | null;
+  @Input() public presetColors: Color[] | null;
 
   public presetColorBind!: string;
-  public customColorBind!: string;
+  @Input() public customColorBind!: string;
 
   constructor(
     private dataSharingService: DataSharingService,
   ) {
-    this.colors = new Array<Color>();
+    this.presetColors = new Array<Color>();
   }
 
   public ngOnInit(): void { }

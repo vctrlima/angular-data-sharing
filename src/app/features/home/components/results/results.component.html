@@ -1,1 +1,7 @@
-<p>results works!</p>
+<div>
+  <h2 class="result-title">Actual color:</h2>
+
+  <div class="result-block" [style.background-color]="selectedColor">
+    <span>{{ selectedColor.toString() | uppercase }}</span>
+  </div>
+</div>

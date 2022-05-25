@@ -3,7 +3,7 @@
 
   <mat-select [(ngModel)]="modelBind" (ngModelChange)="emitModelBindChange()">
     <mat-option *ngFor="let option of modelOptions" [value]="option.code.hex">
-      {{ option.color }}
+      {{ option.color | titlecase }}
     </mat-option>
   </mat-select>
 </mat-form-field>
