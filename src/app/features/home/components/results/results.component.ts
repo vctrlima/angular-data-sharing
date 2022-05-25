@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Color } from 'src/app/shared/color';
 
 @Component({
@@ -7,12 +7,8 @@ import { Color } from 'src/app/shared/color';
   styleUrls: ['./results.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent {
   @Input() public selectedColor: string | Color = '#ffffff';
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

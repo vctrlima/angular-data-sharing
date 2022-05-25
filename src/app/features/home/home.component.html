@@ -1,6 +1,12 @@
 <div>
   <h2 class="app-title">Data sharing</h2>
 
+  <!--
+    The async pipe is responsible for converting the Promise/Observable to a value.
+    The async pipe is used in the template to display the data.
+
+    Read more at https://angular.io/api/common/AsyncPipe.
+  -->
   <app-filters
     [presetColors]="presetColors$ | async"
     [customColorBind]="selectedColor.toString()"

@@ -30,6 +30,11 @@ import { DataSharingService } from './services/data-sharing.service';
     MatInputModule,
     MatSelectModule,
   ],
+
+  /*
+    Providers are used to inject services into the component.
+    In this case, the DataSharingService and the ColorsService is injected into the component.
+   */
   providers: [
     ColorsService,
     DataSharingService
