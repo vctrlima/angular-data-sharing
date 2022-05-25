@@ -23,7 +23,7 @@ export class FiltersComponent implements OnInit {
   public ngOnInit(): void { }
 
   public setPresetColorOnFilter(): void {
-    this.customColorBind = '';
+    this.customColorBind = this.presetColorBind;
     this.dataSharingService.setData(this.presetColorBind);
   }
 
